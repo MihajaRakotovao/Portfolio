@@ -2,6 +2,7 @@ import React from 'react'
 import './projet.scss'
 import blog from './../../assets/images/BlogBasan.png'
 import ankoay from './../../assets/images/ankoay.jpg'
+import tranosoa from './../../assets/images/tranosoa.jpg'
 import { FaGithub} from 'react-icons/fa'
 function Projet() {
   return (
@@ -20,7 +21,7 @@ function Projet() {
                         <p>Projet de Stage pour l'obtention du Diplôme de Licence</p>
                         <p>Frontend - JavaFx</p>
                     </div>
-                    <button> <FaGithub/> GitHub</button>
+                    {/* <button> <FaGithub/> GitHub</button> */}
                 </div>
                 <div className="projet-unity">
                     <img src={ankoay} alt="" style={{ maxHeight: "100%", maxWidth: "100%"   }}/>
@@ -32,7 +33,7 @@ function Projet() {
                     <button > <a className='BtnGit' href="https://github.com/MihajaRakotovao/Ankoay/tree/master" target='blank' ><FaGithub/> GitHub</a> </button>
                 </div>
                 <div className="projet-unity">
-                    <img src={ankoay} alt="" style={{ maxHeight: "100%", maxWidth: "100%"   }}/>
+                    <img src={tranosoa} alt="" style={{ maxHeight: "100%", maxWidth: "100%"   }}/>
                     <div className='description'>
                         <p>Site d'Agence Immo</p>
                         <p>Agence de location de maison à Antananarivo</p>
