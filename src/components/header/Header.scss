@@ -1,0 +1,47 @@
+@import "./../variable";
+@import "./../extend";
+@import "./../function";
+@font-face {
+    font-family: "clos";
+    src: url(../../assets/fonts/robots.txt);
+}
+@include tout();
+.header{
+    @include taille(100%,10vh);
+    @include sticky();
+    #{$bc}: #1b1a2ea9 !important;
+    @include transition;
+    @include BoxSha(rgba(9, 5, 29, 0.082));
+    @include BacF(5px);
+    nav{
+        @include taille(100%,100%);
+        @include row;
+        h1{
+            @include txt(aliceblue,26px,'MonL');
+        }
+        .item{
+            @include taille(60%,100%);
+            #{$fw}: bolder;
+            @include row;
+            #{$p}: relative;
+            .nav-item{
+                @include taille(20%,100%);
+                @include li;
+                #{$p}: relative;
+                @include txt(aliceblue,16px,'MonL');
+
+                &:hover{
+                    cursor: pointer;
+                    left:5px;
+                    color: rgb(160, 188, 212);
+                }
+            }
+        }
+        .menu{
+            @include flexbox(none,none,none,none);
+            @include txt(aliceblue,30px,none);
+        }
+    }
+}
+@import './../responsive/HeaderRes.scss';
+

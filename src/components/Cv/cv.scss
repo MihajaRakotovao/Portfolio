@@ -1,0 +1,17 @@
+@import "./../variable";
+@import "./../extend";
+@import "./../function";
+.box-Resume{
+    @include taille(100%,auto);
+    @include col;
+    #{$bc}: rgba(0, 0, 0, 0.199);
+    button{
+        @include taille(!important,5vh);
+        @include pad(5px,5px);
+        #{$bc}: var(--mena);
+        @include marg(20px,20px);
+        @include borderR(5px);
+        border: none;
+        @include txt(aliceblue,!important,'TitiRegular');
+    }
+}

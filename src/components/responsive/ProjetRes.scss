@@ -1,0 +1,27 @@
+@include breakpoint(910px,max){
+    .box-projet{
+        @include taille(100%,100em);
+        .projet-content{
+            .entete{
+                @include taille(100%,5%);
+                h1{
+                    @include txt(aliceblue,20px,'TitiBold');
+                }
+                h3{
+                    text-align: center;
+                }
+            }
+            .projet-detail{
+                @include taille(100%,90%);
+                @include col;
+                .projet-unity{
+                    @include margin(20px,0,0,0);
+                    @include taille(90%,30%);
+                }
+                button{
+                    @include taille(30%,10%);
+                }
+            }
+        }
+    }
+}

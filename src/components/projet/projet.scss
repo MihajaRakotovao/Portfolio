@@ -1,0 +1,63 @@
+@import "./../variable";
+@import "./../extend";
+@import "./../function";
+@include tout;
+.box-projet{
+    @include taille(100%,50em);
+    @include col;
+    #{$bc}: rgba(0, 0, 0, 0.199);
+    .projet-content{
+        @include taille(100%,100%);
+        @include col;
+        .entete{
+            @include taille(100%,20%);
+            @include flexbox(flex,column,center,center);
+            h1{
+                @include txt(aliceblue,30px,'MonL');
+                @extend %Tal;
+                span{
+                    #{$c}: rgb(161, 182, 200);
+                } 
+            }
+            h3{
+                @include txt(aliceblue,16px,'MonL');
+                letter-spacing: 3px;
+            }
+        }
+        .projet-detail{
+            @include taille(80%,80%);
+            @include flexbox(flex,row,!important,space-around);
+            .projet-unity{
+                @include taille(30%,80%);
+                #{$bc}: rgba(10, 35, 63, 0.425);
+                @include borderR(10px);
+                @include pad(10px 10px);
+                @include col;
+                img{
+                    @include taille(!important,40%);
+                }
+                &:hover{
+                    #{$bc}: rgb(56, 61, 66);
+                }
+                .BtnGit{
+                    text-decoration: none;
+                    color: black
+                }
+            }
+            .description{
+                @include txt(aliceblue,!important,'MonL');
+                @include Talign(justify);
+            }
+            button{
+                @include taille(30%,40px);
+                @include marg(5px 5px);
+                @include borderR(10px);
+                &:hover{
+                    #{$bc}: rgba(0, 89, 255, 0.671);
+                    #{$c}: white;
+                }
+            }
+        }
+    }
+}
+@import './../responsive/ProjetRes.scss';

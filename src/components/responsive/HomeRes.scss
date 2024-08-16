@@ -1,0 +1,162 @@
+@include breakpoint(910px,max){
+    .Home{
+    @include taille(100%,60em);
+        .box-home{
+            @include col;
+            .left{
+                @include taille(100%,40%);
+                @include padding(0,5%,0,0);
+                @include col;
+                text-align: center;
+                .warpper{
+                    font-size: 30px;
+                    font-family: 'MonL';
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 5px;
+                }
+                .box-statut{
+                    @include flexbox(flex,row,center,center);
+                    #{$c}: aliceblue;
+                    h4{
+                        #{$fs}: 20px;
+                    }
+                }
+            }
+            .right{
+                @include taille(100%,40%);
+                #{$p}: relative;
+                left: 5%;     
+                top: 15%;           
+                &::after{
+                    left: 13%;
+                }
+            }
+        }
+        .box-intro{
+            margin-bottom: 20%;
+            .parent-intro{
+                @include col;
+                .left-intro{
+                    @include taille(80%,70%);
+                    @include col;
+                }
+                .right-intro{
+                    @include taille(80%,60%);
+                    @include padding(20px,0,0,0);
+                    @include flexbox(flex,row,center,center);
+                }
+            }
+            .social-media{
+                @include taille(50%,20vh);
+            }
+        }
+    }
+}
+@include breakpoint(920px,min){
+.Home{
+    @include taille(100%,65em);
+    .box-home{
+        @include taille(90%,45%);
+        .left{
+            @include taille(50%,30%);
+            @include padding(0,7%,0,0);
+            @include col;
+            h1{
+                @include txt(white,50px,'TitiRegular');
+            }
+            h3{
+                @include txt(white,26px,'TitiRegular');
+                span{
+                    @include txt(var(--mena),32px,'TitiRegular');
+                }
+            }
+            .box-statut{
+                #{$c}: aliceblue;
+            }
+        }
+        .right{
+            #{$p}: relative;
+            
+        }
+    }
+    .box-intro{
+        .parent-intro{
+            .left-intro{
+                @include taille(50%,70%);
+                @include flexbox(flex,column,!important,space-between);
+                p{
+                    @include txt(white,20px,'MonL');
+                }
+            }
+            .right-intro{
+                @include padding(5%,5%,0,0);
+                @include flexbox(flex,row,center,center);
+            }
+        }
+        .social-media{
+            @include taille(30%,15vh);
+        }
+    }
+}
+
+}
+@include breakpoint(1500px,min){
+    .Home{
+        .box-home{
+            .left{
+                h1{
+                    @include txt(white,60px,'TitiRegular');
+                }
+                h3{
+                    @include txt(white,40px,'TitiRegular');
+                    span{
+                        @include txt(var(--mena),46px,'TitiBold');
+                    }
+                }
+                .box-statut{
+                    @include flexbox(flex,row,center,!important);
+                    #{$c}: aliceblue;
+                    h4{
+                        @include txt(!important,38px,'TitiRegular');
+                    }
+                }
+            }
+            .right{
+                #{$p}: relative;
+            }
+        }
+        .box-intro{
+            .parent-intro{
+                @include taille(80%,50%);
+                @include flexbox(flex,row,center,space-around);
+                .left-intro{
+                    @include taille(50%,100%);
+                    @include flexbox(flex,column,!important,space-between);
+                    h1 {
+                        @include txt(white,50px,'TitiBold');
+                    }
+                    p{
+                        @include txt(white,30px,'MonL');
+                    }
+                }
+                .right-intro{
+                    @include padding(5%,5%,0,0);
+                    @include flexbox(flex,row,center,center);
+                }
+            }
+            .social-media{
+                @include taille(30%,15vh);
+                h1{
+                    @include txt(aliceblue,40px,'TitiRegular');
+                }
+                span{
+                    .icon{
+                        @include txt(var(--mena),56px,!important);
+                    }
+                }
+            }
+        }
+    }
+    
+}

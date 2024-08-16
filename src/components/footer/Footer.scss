@@ -1,0 +1,27 @@
+@import "./../variable";
+@import "./../extend";
+@import "./../function";
+footer{
+    @include taille(100%,10vh);
+    #{$bc}: rgba(0, 0, 0, 0.651);
+    @include row;
+    @include txt(rgb(158, 163, 168),!important,'TitiLight');
+    .info-footer, .footer-social-media{
+        @include taille(20%,100%);
+        @include flexbox(flex,row,center,center);
+    }
+    .info-footer{
+        #{$fs}: 14px;
+    }
+    .footer-social-media{
+        @include row;
+        .icon-footer{
+            #{fs}: 26px;
+            #{$c}: rgb(158, 163, 168); 
+            &:hover{
+                transform: scale(0.8);
+            }
+        }
+    }
+}
+@import './../responsive/FooterRes.scss';

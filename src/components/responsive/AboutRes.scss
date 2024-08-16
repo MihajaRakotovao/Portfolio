@@ -1,0 +1,83 @@
+@include breakpoint(900px,max){
+    .box-about{
+        @include taille(100%,110em);
+        @include col;
+        .about-content{
+            @include col;
+            @include taille(100%,90%);
+            .about-left{
+                @include taille(90%,80%);
+                @include padding(5%,0,0,0);
+                ul{
+                    .parcours{
+                        @include margin(0,0,0,20px);
+                        .date{
+                            @include pad(20px,20px);
+                        }
+                        .info{
+                            h2{
+                                @include txt(var(--mena),22px,'TitiRegular');
+                            }
+                        }
+                    }
+                }
+            }
+            .about-right{
+                @include taille(80%,40%);
+            }
+        }
+        .about-langage{
+            @include taille(100%,50%);
+            @include padding(0,0,0,5%);
+            .box-langage{
+                @include grid(2,10px);
+                @include pad(10px 10px);
+            }
+        }
+    }
+}
+@include breakpoint(1500px,min){
+    .box-about{
+        @include taille(100%,120em);
+        .about-content{
+            .about-left{
+                @include taille(50%,100%);
+                @include padding(5%,0,0,0);
+                h1{
+                    @include txt(aliceblue,40px,'TitiBold');
+                }
+                ul{
+                    .parcours{
+                        .date{
+                            @include taille(200px,auto);
+                            @include txt(aliceblue,26px,'TitiLight');
+                        }
+                        .info{
+                            #{$w}: calc(100% - 200px);
+                            h2{
+                                @include txt(var(--mena),36px,'TitiRegular');
+                            }
+                            p{
+                                @include txt(aliceblue,30px,'TitiLight');
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+        .about-langage{
+            @include padding(0,0,0,5%);
+            h1{
+                @include txt(aliceblue,40px,'TitiBold');
+            }
+            .box-langage{
+                .langage{
+                    .icon{
+                        @include txt(aliceblue,85px,!important);
+                    }
+                }
+            }
+        }
+    }
+}

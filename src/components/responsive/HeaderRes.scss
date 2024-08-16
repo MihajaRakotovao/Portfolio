@@ -1,0 +1,45 @@
+@include breakpoint(600px,max){
+    .header{
+        @include taille(100%,auto);
+        nav{
+            @include overfl;
+            @include transition;
+            h1{
+                @include txt(aliceblue,22px,'TitiItalic');
+            }
+            .item{
+                height: 30vh;
+                display: none;
+                flex-direction: column;
+                #{$p}: relative;
+                @include overfl;
+                .nav-item{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .menu{
+                height: 10vh;
+                @include row;
+                #{$p}: relative;
+                @include overfl;
+            }
+        }
+    }
+}
+@include breakpoint(1500px,min){
+    .header{
+        nav{
+            h1{
+                #{$c}: aliceblue;
+                #{$fs}: 26px;
+            }
+            .item{
+                .nav-item{
+                    @include taille(100%,100%);
+                    #{$fs}: 28px;
+                }
+            }
+        }
+    }
+}

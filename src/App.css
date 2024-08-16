@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Raleway", serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url(../src/assets/images/google.jpg) ;
+    background-color: rgb(27, 26, 26);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    /* backdrop-filter: blur(2px) !important; */
+  }
+@font-face {
+  font-family: 'DroidBitalic';
+  src: url(./assets/fonts/DroidSerif-BoldItalic.ttf);
+}
+@font-face {
+  font-family: 'TitiLight';
+  src: url(./assets/fonts/TitilliumWeb-Light.ttf);
+}
+@font-face {
+  font-family: 'TitiRegular';
+  src: url(./assets/fonts/TitilliumWeb-Regular.ttf);
+}
+@font-face {
+  font-family: 'TitiItalic';
+  src: url(./assets/fonts/TitilliumWeb-Italic.ttf);
+}
+@font-face {
+  font-family: 'TitiBold';
+  src: url(./assets/fonts/TitilliumWeb-Bold.ttf);
+}

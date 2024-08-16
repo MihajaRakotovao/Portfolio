@@ -1,0 +1,129 @@
+@import "./../variable";
+@import "./../extend";
+@import "./../function";
+@include tout;
+
+.box-about{
+    @include overfl;
+    @include taille(100%,90em);
+    @include flexbox(flex,column,center,space-between);
+    #{$bc}: rgba(0, 0, 0, 0.199);
+    .about-content{
+        @include taille(100%,45%);
+        @include row;
+        .about-left{
+            @include taille(50%,70%);
+            @include padding(0,5%,0,0);
+            @include flexbox(flex,column,!important,!important);
+            h1{
+                @include txt(aliceblue,30px,'MonL');
+                @extend %Tal;
+                span{
+                    #{$c}: rgb(161, 182, 200);
+                } 
+            }
+            ul{
+                @include taille(100%,100%);
+                @include margin(30px,0,0,0);
+                list-style: none;
+                .parcours{
+                    @include flexbox(flex,row,!important,!important);
+                    @include margin(0,0,0,30px);
+                    .date{
+                        @include taille(150px,auto);
+                        @include txt(aliceblue,!important,'MonL');
+                        @include pad(25px,25px);
+                    }
+                    .info{
+                        #{$w}: calc(100% - 125px);
+                        @include padding(0,25px,0,0);
+                        #{$p}: relative;
+                        h2{
+                            @include txt( rgb(161, 182, 200),26px,'MonL');
+                        }
+                        p{
+                            @include padding(10px,0,0,0);
+                            @include txt(aliceblue,!important,'MonL');
+                        }
+                        &::before{
+                            @include beforeI;
+                        }
+                        &::after{
+                            @include afterI;
+                        }
+                        &:hover{
+           
+                            right: 20px;
+                            h2{
+                                #{$c}: rgba(236, 228, 242, 0.671);
+                            }
+
+                        }
+                    }
+
+                }
+
+            }
+        }
+        .about-right{
+            @include taille(40%,100%);
+            @include flexbox(flex,row,center,center);
+        }
+    }
+    .about-langage{
+        @include taille(70%,54%);
+        @include col;
+        @include pad(5%,0%);
+        h1{
+            @include txt(aliceblue,30px,'MonL');
+            @extend %Tal;
+            span{
+                #{$c}:  rgb(161, 182, 200);
+            } 
+        }
+        .box-langage{
+            @include taille(100%,80%);
+            @include grid(4,70px);
+            .langage{
+                @include flexbox(flex,row,center,center);
+                #{$p}: relative;
+                @include boxSh(rgba(0, 0, 0, 0.801));
+                border-radius: 20% 40%;
+                .icon{
+                    @include txt(aliceblue,56px,!important);
+                }
+                h3{
+                    @include txt(black,30px,!important);
+                    padding-left: 5px;
+                    display: none;
+                    transition: all .5s linear;
+                    position: relative;
+                }
+                &:hover{
+                    #{$bc}: rgb(161, 182, 200);
+                    top: 5px;
+                }
+                &:hover h3{
+                    animation: swipp .5s linear;
+                    display: flex;
+                }
+                &:hover .icon{
+                    color: black;
+                    transition: all  .5s linear;
+                }
+                @keyframes swipp {
+                    from{
+                        transform: translate(30px,0);
+                        opacity: 10%;
+                    }
+                    to{
+                        transform: translate(0);
+                        opacity: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@import './../responsive/AboutRes.scss';
+

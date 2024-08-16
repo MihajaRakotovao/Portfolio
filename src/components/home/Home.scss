@@ -1,0 +1,157 @@
+:root{
+    --mena:rgb(31, 86, 189);
+}
+
+@import "./../variable";
+@import "./../extend";
+@import "./../function";
+
+.Home{
+    @include taille(100%,50em);
+    @include col;
+    .box-home{
+        @include taille(80%,45%);
+        @include row;
+        .left{
+            @include taille(50%,30%);
+            @include row;
+            
+            .warpper{
+                font-size: 60px;
+                font-family: 'MonL';
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 5px;
+                span{
+                    color: aliceblue;
+                    opacity: 0%;
+                    transform: translate(-300px,0)scale(0);
+                    animation: animate 6s forwards infinite;
+                    display: inline-block;
+                    &:nth-of-type(2){animation-delay: .1s;}
+                    &:nth-of-type(3){animation-delay: .2s;}
+                    &:nth-of-type(4){animation-delay: .3s;}
+                    &:nth-of-type(5){animation-delay: .4s;}
+                    &:nth-of-type(6){animation-delay: .5s;}
+                    &:nth-of-type(7){animation-delay: .6s;}
+                    &:nth-of-type(8){animation-delay: .7s;}
+                    &:nth-of-type(9){animation-delay: .8s;}
+                    &:nth-of-type(10){animation-delay: .9s;}
+                    &:nth-of-type(11){animation-delay: 1s;}
+                    &:nth-of-type(12){animation-delay: 1.1s;}
+                    &:nth-of-type(13){animation-delay: 1.2s;}
+                    &:nth-of-type(14){animation-delay: 1.3s;}
+                    &:nth-of-type(15){animation-delay: 1.4s;}
+                }
+                @keyframes animate {
+                    10%{
+                        opacity: 0;
+                        transform: translate(30px,0) scale(0.8);
+                        color:aliceblue;
+                    }
+                    50%{
+                        transform: translate(30px,0) scale(1);
+                        color:aliceblue;
+                    }
+                    90%{
+                        transform: translate(0) scale(1.2);
+                        color:rgb(82, 94, 104);
+                    }
+                    99%{
+                        transform: translate(0) scale(1);
+                        color:aliceblue;
+                        opacity: 1;
+                    }
+                    100%{
+                        transform: translate(0) scale(1);
+                        color:aliceblue;
+                        opacity: 1;
+                    }
+                }
+            }
+            .box-statut{
+                @include taille(80%,20vh);
+                
+                h4{
+                    @include txt(!important,28px,'MonL');
+                    span{
+                        #{$c}: rgba(240, 248, 255, 0.034);
+                    // @include anime(opaci,3s,linear,12);
+                    animation: opaci 3s linear infinite;
+                    }
+                    & span:nth-child(3){animation-delay: 3s;}
+                    & span:nth-child(2){animation-delay: 2s;}
+                    & span:nth-child(1){animation-delay: 1s;}
+                }
+                @keyframes opaci {
+                    0%{
+                        opacity: 10%;
+                        color: rgb(43, 43, 91);
+
+                    }
+                    100%{
+                       opacity: 100%;
+                       color: rgb(161, 182, 200);
+                    }
+                }
+            }
+        }
+        .right{
+            @include taille(50%,80%);
+            @include flexbox(flex,column,center,center);
+        }
+    }
+    .box-intro{
+        @include taille(100%,50%);
+        @include col;
+        #{bc}: rgba(0, 0, 0, 0.199);
+        .parent-intro{
+            @include taille(100%,50%);
+            @include flexbox(flex,row,center,center);
+            .left-intro{
+                @include taille(60%,70%);
+                @include flexbox(flex,column,!important,space-around);
+                h1 {
+                    @include txt(white,30px,'MonL');
+                    @extend %Tal;
+                    span{
+                        #{$c}: rgb(161, 182, 200);
+                    }
+                }
+                p{
+                    @include txt(white,!important,'MonR');
+                    padding-top: 20px;
+                }
+            }
+            .right-intro{
+                @include taille(auto,100%);
+                @include flexbox(flex,row,center,left);
+            }
+        }
+        .social-media{
+            @include taille(20%,20vh);
+            @include col;
+            h1{
+                @include txt(aliceblue,!important,'TitiRegular');
+            }
+            span{
+                @include taille(100%,auto);
+                @include row;
+                .icon{
+                    @include txt(rgb(161, 182, 200),36px,!important);
+                    @include pad(10px,10px);
+                    @include borderRo(50%,50%);
+                    #{$bc}: aliceblue;
+                    border: none;
+                    &:hover{
+                        @include scale(0.9);
+                    }
+                }
+            }
+        }
+    }
+}
+@import './../responsive/HomeRes.scss';
+
+
+

@@ -1,0 +1,17 @@
+@include breakpoint(1500px,min){
+    footer{
+        .info-footer{
+            #{$fs}: 24px;
+        }
+        .footer-social-media{
+            @include row;
+            .icon-footer{
+                #{fs}: 34px;
+                #{$c}: rgb(158, 163, 168); 
+                &:hover{
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }
+}
